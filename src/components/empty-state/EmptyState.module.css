@@ -1,0 +1,20 @@
+.card {
+    position: relative;
+    overflow: visible;
+    padding: var(--mantine-spacing-xl);
+    padding-top: calc(var(--mantine-spacing-xl) * 1.5 + 20px);
+    height: 200px;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 30px);
+    background-color: rgb(74, 102, 228);
+  }
+  
+  .title {
+    padding-top: 80px;
+    font-family: Greycliff CF, var(--mantine-font-family);
+    line-height: 1;
+  }

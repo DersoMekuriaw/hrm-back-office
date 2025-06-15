@@ -1,7 +1,6 @@
-
-import { Layout } from "@/components/Layout";
+import StoreProvider from "@/store/provider";
 import "./globals.css";
-import MantineProviderRegistry from "@/components/MantineProvider";
+import MantineProviderRegistry from "./MantineProvider";
 
 export default function RootLayout({
   children,
@@ -11,11 +10,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <MantineProviderRegistry>
-            <Layout>
-                {children}
-            </Layout>
-          </MantineProviderRegistry>
+        <MantineProviderRegistry>
+          <StoreProvider>
+            {children}
+          </StoreProvider>
+        </MantineProviderRegistry>
       </body>
     </html>
   );

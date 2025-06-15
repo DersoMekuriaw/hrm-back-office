@@ -1,85 +1,153 @@
 {
   "employees": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
-      "phone": "555-0101",
-      "departmentId": 1,
-      "positionId": 1,
-      "hireDate": "2020-01-15",
-      "salary": 75000,
-      "status": "active"
-    },
-    {
-      "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "email": "jane.smith@example.com",
-      "phone": "555-0102",
-      "departmentId": 2,
-      "positionId": 3,
-      "hireDate": "2019-05-20",
-      "salary": 82000,
-      "status": "active"
-    },
-    {
-      "id": 3,
-      "firstName": "Nolawi",
-      "lastName": "Mekuriaw",
-      "email": "derso2009@gmail.com",
-      "phone": "+251931841583",
-      "departmentId": 1,
-      "positionId": 1,
-      "hireDate": "2020-01-15",
+      "firstName": "Getachew",
+      "lastName": "XXX",
+      "email": "getachew@gmail.com",
+      "phone": "0910101010",
+      "sector": "academic",
+      "departmentId": "1",
+      "positionId": "8adfbc31-4066-4d9c-98cb-dd082689dcd7",
+      "hireDate": "2025-06-01",
       "salary": 13000,
+      "status": "active",
+      "id": "1"
+    },
+    {
+      "id": "92ba3bc2-e88f-4c47-a265-bc9776c452c0",
+      "firstName": "Semagn",
+      "lastName": "Shiferie",
+      "email": "semagn@gmail.com",
+      "phone": "0912121212",
+      "sector": "academic",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "positionId": "97a5c349-6753-42f2-8447-d89e7e9fcdd9",
+      "hireDate": "2025-06-15",
+      "salary": 13598,
       "status": "active"
+    },
+    {
+      "firstName": "Derso",
+      "lastName": "Mekuriaw Kebede",
+      "email": "derso2009@gmail.com",
+      "phone": "0931841583",
+      "gender": "male",
+      "birthDate": "1995-04-13",
+      "citizenship": "Ethiopian",
+      "sector": "academic",
+      "jobTypeId": "lecturer",
+      "academicRankId": "lect",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "positionId": "",
+      "hireDate": "2025-06-15",
+      "status": "active",
+      "id": "03102a8a-0c55-4e37-bbd8-18eb08ab2c30"
     }
   ],
   "departments": [
     {
-      "id": 1,
-      "name": "Technology",
-      "description": "Software development team",
-      "managerId": 1
+      "id": "1",
+      "name": "IoT",
+      "description": "Institute of Technology",
+      "sector": "academic"
     },
     {
-      "id": 2,
-      "name": "Engineering",
-      "description": "Engineering communications",
-      "managerId": 2
+      "id": "4",
+      "name": "HR",
+      "description": "Human Resource",
+      "sector": "administrative"
+    },
+    {
+      "id": "5",
+      "name": "Finance",
+      "description": "Finance",
+      "sector": "administrative"
+    },
+    {
+      "id": "f4609b17-f0db-42d3-9dae-460bdbf97c43",
+      "parentId": "1",
+      "name": "School of Computing",
+      "description": "School of Computing",
+      "sector": "academic"
+    },
+    {
+      "id": "6c280024-81fc-422f-90c6-536bab63c30a",
+      "parentId": "1",
+      "name": "School of Civil and Water Eng.",
+      "description": "School of Civil and Water Eng.",
+      "sector": "academic"
+    },
+    {
+      "id": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "parentId": "f4609b17-f0db-42d3-9dae-460bdbf97c43",
+      "name": "CS",
+      "description": "Computer Science",
+      "sector": "academic"
+    },
+    {
+      "id": "b7e9d582-4403-42f1-b616-16255218d3b6",
+      "parentId": "f4609b17-f0db-42d3-9dae-460bdbf97c43",
+      "name": "SW Eng.",
+      "description": "Software Engineering",
+      "sector": "academic"
+    },
+    {
+      "id": "91885d9a-aa0e-4ad4-ac2b-215e91f255c4",
+      "parentId": "",
+      "name": "Health Science",
+      "description": "Health Science",
+      "sector": "academic"
+    },
+    {
+      "id": "8d3785cc-c99c-493f-81f5-137b2e972bd9",
+      "parentId": "f4609b17-f0db-42d3-9dae-460bdbf97c43",
+      "name": "IS",
+      "description": "Information System",
+      "sector": "academic"
     }
   ],
   "positions": [
     {
-      "id": 1,
-      "title": "Senior Developer",
-      "departmentId": 1,
-      "description": "Lead software developer"
+      "id": "97a5c349-6753-42f2-8447-d89e7e9fcdd9",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "title": "HoD",
+      "description": "Department Head",
+      "termDuration": 3
     },
     {
-      "id": 2,
-      "title": "Junior Developer",
-      "departmentId": 1,
-      "description": "Entry-level developer"
+      "id": "29675443-8c8f-401f-bd98-8198a29dc6f6",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "title": "QA",
+      "description": "Quality Assurance",
+      "termDuration": 3
     },
     {
-      "id": 3,
-      "title": "Marketing Manager",
-      "departmentId": 2,
-      "description": "Head of marketing department"
+      "id": "8adfbc31-4066-4d9c-98cb-dd082689dcd7",
+      "departmentId": "1",
+      "title": "Dean",
+      "description": "Institute Dean",
+      "termDuration": 3
     }
   ],
-  "leaveRequests": [
+  "leaveRequests": [],
+  "roleHistories": [
     {
-      "id": 1,
-      "employeeId": 1,
-      "leaveType": "annual",
-      "startDate": "2023-07-01",
-      "endDate": "2023-07-07",
-      "reason": "Summer vacation",
-      "status": "approved"
+      "id": "6eb9ea18-2653-4993-8096-05f1139f0fa0",
+      "employeeId": "1",
+      "sector": "academic",
+      "departmentId": "1",
+      "positionId": "8adfbc31-4066-4d9c-98cb-dd082689dcd7",
+      "startDate": "2025-06-15",
+      "endDate": "2027-07-15"
+    },
+    {
+      "id": "6c76607a-c3fc-47df-bcaa-3e2b343f1b73",
+      "employeeId": "92ba3bc2-e88f-4c47-a265-bc9776c452c0",
+      "sector": "academic",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "positionId": "97a5c349-6753-42f2-8447-d89e7e9fcdd9",
+      "startDate": "2025-06-15",
+      "endDate": "2027-06-15"
     }
   ]
 }

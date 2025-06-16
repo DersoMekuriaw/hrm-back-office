@@ -30,21 +30,33 @@ It is built for internal back-office use by HR and management teams in mid-to-la
 ---
 
 ## 🧱 Project Structure
-src/
+📦 hrm-back-office/
 ├── app/
-│ └── page.tsx # Landing / dashboard page
+│   └── page.tsx                   # Main dashboard or landing page
 │
 ├── components/
-│ └── RoleSettingForm.tsx # Main form logic (smart component)
+│   └── RoleSettingForm.tsx        # Core form for assigning roles to employees
 │
 ├── schemas/
-│ └── role-setting.schema.ts # Zod schema for validation and form values
+│   └── role-setting.schema.ts     # Zod schema and form validation
 │
 ├── types/
-│ └── employee.type.ts # Custom types for Department, Employee, etc.
+│   └── employee.type.ts           # Type definitions (Department, Employee, etc.)
 │
-├── styles/ # Tailwind & global CSS
-└── utils/ # Any helper functions
+├── styles/
+│   └── globals.css                # Global Tailwind styles
+│
+├── utils/
+│   └── date-utils.ts              # (Optional) Helper functions
+│
+├── public/                        # Static assets like images or logos
+│
+├── .env.local                     # Environment variables
+├── tailwind.config.ts             # Tailwind CSS configuration
+├── next.config.js                 # Next.js configuration
+├── tsconfig.json                  # TypeScript configuration
+├── package.json                   # Project dependencies and scripts
+└── README.md                      # Project documentation
 
 
 ---

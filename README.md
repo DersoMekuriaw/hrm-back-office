@@ -30,6 +30,8 @@ It is built for internal back-office use by HR and management teams in mid-to-la
 ---
 
 ## 🧱 Project Structure
+```bash
+# ⬇
 📦 hrm-back-office/
 ├── app/
 │   └── page.tsx                   # Main dashboard or landing page

@@ -30,8 +30,7 @@ It is built for internal back-office use by HR and management teams in mid-to-la
 ---
 
 ## 🧱 Project Structure
-```bash
-# 
+```
 📦 hrm-back-office/
 ├── app/
 │   └── page.tsx                   # Main dashboard or landing page
@@ -59,7 +58,7 @@ It is built for internal back-office use by HR and management teams in mid-to-la
 ├── tsconfig.json                  # TypeScript configuration
 ├── package.json                   # Project dependencies and scripts
 └── README.md                      # Project documentation
-
+```
 
 ---
 

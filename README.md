@@ -1,37 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏢 HRM Back Office System
 
-## Getting Started
+A **Human Resource Management (HRM) Back Office System** built using **Next.js 14 App Router**, **TypeScript**, and **React Hook Form** to streamline organizational role assignments, track employee positions, and manage department hierarchies with data-driven accuracy.
 
-First, run the development server:
+This system supports dynamic sector → department → position → employee relationships and automates term-based date logic with validation and scalability in mind.
+
+---
+
+## 📌 Project Purpose
+
+The system is designed for institutions with structured departments and HR workflows. It allows administrators to:
+
+- Assign employees to roles within specific departments and sectors
+- Set and auto-calculate term-based positions using a start date
+- Ensure clean, validated, and error-free form submissions
+
+It is built for internal back-office use by HR and management teams in mid-to-large organizations.
+
+---
+
+## 🧠 Key Features
+
+- ✅ Dynamic Cascading Selects: Sector → Department → Position → Employee  
+- 📅 Auto-calculated `End Date` based on selected `Position`'s term duration  
+- ✅ Robust validation using **Zod** and **React Hook Form**  
+- 🧼 Clean form state management with `reset` and `watch`  
+- 🎨 Beautiful UI with **Mantine** and **Tailwind CSS**  
+- 🧩 Modular TypeScript structure with reusable schemas and types  
+
+---
+
+## 🧱 Project Structure
+src/
+├── app/
+│ └── page.tsx # Landing / dashboard page
+│
+├── components/
+│ └── RoleSettingForm.tsx # Main form logic (smart component)
+│
+├── schemas/
+│ └── role-setting.schema.ts # Zod schema for validation and form values
+│
+├── types/
+│ └── employee.type.ts # Custom types for Department, Employee, etc.
+│
+├── styles/ # Tailwind & global CSS
+└── utils/ # Any helper functions
+
+
+---
+
+## 🔧 Technologies Used
+
+| Tool               | Purpose                                      |
+|--------------------|----------------------------------------------|
+| [Next.js 14](https://nextjs.org)        | Full-stack React framework (App Router)  |
+| [TypeScript](https://www.typescriptlang.org/)  | Strongly typed development               |
+| [React Hook Form](https://react-hook-form.com/) | Lightweight and flexible form handling  |
+| [Zod](https://zod.dev/)                | Schema validation for forms              |
+| [Mantine](https://mantine.dev/)         | UI components and layout tools           |
+| [Tailwind CSS](https://tailwindcss.com) | Utility-first styling                    |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- Package manager (npm / yarn / pnpm / bun)
+
+### Installation
 
 ```bash
+git clone https://github.com/DersoMekuriaw/hrm-back-office.git
+cd hrm-back-office
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Replace `https://github.com/DersoMekuriaw` with your actual GitHub profile link.  
+✅ Add screenshots or GIFs under the **UI Preview** section if available.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# hrm-back-office" 
+You're good to go! Let me know if you'd like a license file, contribution guidelines, or sample issue templates.

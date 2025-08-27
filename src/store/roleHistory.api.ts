@@ -12,7 +12,7 @@ export const roleHistoryApi = createApi({
             params.append("_limit", limit.toString());
             params.append("_start", offset.toString());
     
-            if (sector) params.append("sector", sector);
+            if (sector !== "") params.append("sector", sector);
     
             if (search) {
               params.append("title_like", search);

@@ -22,7 +22,8 @@ const data = [
   { link: '/departments', label: 'Departments', icon: IconBuilding },
   { link: '/positions', label: 'Positions', icon: IconHierarchy },
   { link: '/leaves', label: 'Leaves', icon: IconCalendarMinus },
-  { link: '/role-setting', label: 'Role Setting', icon: IconSettings }
+  { link: '/role-setting', label: 'Role Setting', icon: IconSettings },
+  { link: '/archived', label: 'Archived', icon: IconSettings }
 ];
 
 export function Navbar() {
@@ -48,6 +49,12 @@ export function Navbar() {
         setActive(item.label);
       }}
       component={Link}
+      className={`flex items-center gap-3 px-2 py-2 transition-colors font-medium text-gray-900 rounded-md
+        ${
+          active === item.label
+            ? 'bg-white'
+            : 'hover:bg-white'
+        }`}
     />
 
   ));

@@ -48,13 +48,16 @@ const RoleSettingPage = () => {
     createDefaultPosition()
   );
 
+  const [filterValue, setFilterValue] = useState("");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(5);
 
   const { data: roleHistories = [], isLoading: rolesHistoryLoading } =
     useGetRoleHistoriesQuery({});
-  const { data: employees = [], isLoading: empLoading } = useGetEmployeesQuery({});
+  const { data: employees = [], isLoading: empLoading } = useGetEmployeesQuery(
+    {}
+  );
   const { data: departments = [], isLoading: deptsLoading } =
     useGetDepartmentsQuery({});
   const {
@@ -66,9 +69,11 @@ const RoleSettingPage = () => {
     limit: pageSize,
     offset: (page - 1) * pageSize,
     search: query,
+    sector: filterValue,
   });
 
-  const isLoading = rolesHistoryLoading || empLoading || deptsLoading || posLoading;
+  const isLoading =
+    rolesHistoryLoading || empLoading || deptsLoading || posLoading;
 
   const total = positions?.length ?? 0;
   const totalPages = Math.ceil(total / pageSize);
@@ -190,6 +195,7 @@ const RoleSettingPage = () => {
             isLoading={isLoading}
             data={roleHistoriesWithDisplay}
             columns={columns}
+            onFilter={(filterValue: string) => setFilterValue(filterValue)}
             onSearch={(inputValue: string) => setQuery(inputValue)}
             onViewDetail={(row) => {
               const original = roleHistories.find((r) => r.id === row.id);

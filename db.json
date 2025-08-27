@@ -5,11 +5,15 @@
       "lastName": "XXX",
       "email": "getachew@gmail.com",
       "phone": "0910101010",
+      "gender": "male",
+      "birthDate": "2025-08-11",
+      "citizenship": "Ethiopian",
       "sector": "academic",
-      "departmentId": "1",
-      "positionId": "8adfbc31-4066-4d9c-98cb-dd082689dcd7",
+      "jobTypeId": "lecturer",
+      "academicRankId": "lect",
+      "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
+      "positionId": "",
       "hireDate": "2025-06-01",
-      "salary": 13000,
       "status": "active",
       "id": "1"
     },
@@ -38,7 +42,7 @@
       "jobTypeId": "lecturer",
       "academicRankId": "lect",
       "departmentId": "1732384a-b3e1-4167-a728-0c490045e54d",
-      "positionId": "",
+      "positionId": "29675443-8c8f-401f-bd98-8198a29dc6f6",
       "hireDate": "2025-06-15",
       "status": "active",
       "id": "03102a8a-0c55-4e37-bbd8-18eb08ab2c30"
@@ -126,6 +130,13 @@
       "departmentId": "1",
       "title": "Dean",
       "description": "Institute Dean",
+      "termDuration": 3
+    },
+    {
+      "id": "aab089ac-5ffe-4fef-a0ff-08c5e043f7a3",
+      "departmentId": "1",
+      "title": "E-Learning Coordintor",
+      "description": "E-Learning Coordintor",
       "termDuration": 3
     }
   ],

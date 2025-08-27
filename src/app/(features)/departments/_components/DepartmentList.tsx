@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { Table } from '@mantine/core';
+import { SECTORS } from "@/types/employee.type";
+import { Table } from "@mantine/core";
 
 interface Column {
   key: string;
@@ -17,14 +18,13 @@ interface DataTableProps<T> {
 }
 
 export function DepartmentList<T>({
-  data, 
+  data,
   columns,
   isLoading = false,
   onSearch,
   onFilter,
-  onViewDetail, 
+  onViewDetail,
 }: DataTableProps<T>) {
-  
   return (
     <>
       <div className="bg-white pb-2 flex flex-col md:flex-row md:items-center md:justify-end gap-4 mb-2">
@@ -37,17 +37,21 @@ export function DepartmentList<T>({
               onChange={(e) => onSearch(e.target.value)}
               className="border border-gray-300 rounded-lg px-3 py-1 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <select 
-            onChange={(e) => onFilter(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option>Filter</option>
-              <option value="academic">Academic</option>
-              <option value="administrative">Administration</option>
+            <select
+              onChange={(e) => onFilter(e.target.value)}
+              className="border border-gray-300 rounded-lg px-3 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Filter</option>
+              {SECTORS.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
             </select>
           </div>
         )}
       </div>
-      
+
       <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
         <div className="overflow-x-auto">
           <Table striped highlightOnHover className="min-w-full">
@@ -66,22 +70,28 @@ export function DepartmentList<T>({
             <tbody className="bg-white divide-y divide-gray-200">
               {isLoading && (
                 <tr>
-                  <td colSpan={columns.length + 1} className="px-6 py-4 text-center">
+                  <td
+                    colSpan={columns.length + 1}
+                    className="px-6 py-4 text-center"
+                  >
                     Loading...
                   </td>
                 </tr>
               )}
               {data.length === 0 ? (
                 <tr>
-                  <td colSpan={columns.length + 1} className="px-6 py-4 text-center text-gray-500">
+                  <td
+                    colSpan={columns.length + 1}
+                    className="px-6 py-4 text-center text-gray-500"
+                  >
                     No records found
                   </td>
                 </tr>
               ) : (
                 data.map((row, index) => (
-                  <tr 
+                  <tr
                     onClick={() => onViewDetail && onViewDetail(row)}
-                    key={index} 
+                    key={index}
                     className="group hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
                   >
                     {columns.map((col) => (

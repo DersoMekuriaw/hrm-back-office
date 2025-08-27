@@ -89,7 +89,7 @@ export interface OrganizationData {
 
 export const SECTORS = [
   { label: "Academic", value: "academic" },
-  { label: "Administration", value: "administrative" },
+  { label: "Administrative", value: "administrative" },
 ];
 
 export const EMPLOYEE_STATUS = [
@@ -114,7 +114,7 @@ export const JOB_TYPES: JobType[] = [
   { id: "researcher", title: "Researcher", sector: "academic" },
   
   { id: "secretary", title: "Secretary", sector: "administrative" },
-  { id: "registrar_officer", title: "Registrar Officer", sector: "administrative" },
+  { id: "registrar_officer", title: "Registrar Ofcoficer", sector: "administrative" },
   { id: "accountant", title: "Accountant", sector: "administrative" },
   { id: "driver", title: "Driver", sector: "administrative" },
 ];
